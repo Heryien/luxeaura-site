@@ -1,0 +1,7 @@
+ErrorDocument 404 /404.html
+Options -Indexes
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpeg "access plus 30 days"
+  ExpiresByType image/png "access plus 30 days"
+</IfModule>
