@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+
+Sitemap: https://luxeaura.mujiso.com/sitemap.xml

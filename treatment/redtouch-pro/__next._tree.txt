@@ -1,5 +1,0 @@
-:HL["/_next/static/chunks/3yb6q0_fcw5qv.css","style"]
-:HL["/_next/static/media/81cef6a21128489e-s.p.2csanl8cs02r-.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-:HL["/_next/static/media/8c920c2e27a65459-s.p.34vrj7u2gaa_j.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-:HL["/_next/static/media/cc4b84345f7a025e-s.p.2zanptnlo2hyo.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"treatment","param":null,"prefetchHints":4192,"slots":{"children":{"name":"slug","param":{"type":"d","key":"redtouch-pro","siblings":[]},"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}},"staleTime":300,"buildId":"nzt-ieHOwgSTQZnOZkv6D"}
