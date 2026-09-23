@@ -1,7 +1,43 @@
+# luxeaura static site on cPanel/LiteSpeed. Written by hand, see anti-slop/audit-010.
 ErrorDocument 404 /404.html
 Options -Indexes
-<IfModule mod_expires.c>
-  ExpiresActive On
-  ExpiresByType image/jpeg "access plus 30 days"
-  ExpiresByType image/png "access plus 30 days"
+
+# Always HTTPS.
+RewriteEngine On
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Compress text assets (the host sent HTML/JS/CSS uncompressed).
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/javascript application/json application/xml image/svg+xml
+</IfModule>
+<IfModule mod_brotli.c>
+  AddOutputFilterByType BROTLI_COMPRESS text/html text/css text/plain text/xml application/javascript application/json application/xml image/svg+xml
+</IfModule>
+
+<IfModule mod_headers.c>
+  # The host default is "no-store" on everything. Override per file type
+  # (FilesMatch only: LiteSpeed does not reliably support <If>/expr here).
+  # HTML revalidates so a deploy shows at once; JS/CSS under _next/static are
+  # content-hashed and never change; images and fonts keep for 30 days.
+  <FilesMatch "\.html$">
+    Header always set Cache-Control "no-cache"
+  </FilesMatch>
+  <FilesMatch "\.(js|css)$">
+    Header always set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(webp|jpg|png|ico|woff2)$">
+    Header always set Cache-Control "public, max-age=2592000"
+  </FilesMatch>
+
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+  # No includeSubDomains: other *.mujiso.com previews are not ours to commit.
+  Header always set Strict-Transport-Security "max-age=31536000"
+</IfModule>
+
+<IfModule mod_mime.c>
+  AddType image/webp .webp
 </IfModule>
