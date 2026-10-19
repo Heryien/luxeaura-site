@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Brief website Luxe Aura</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ivory: #f4eee4; --sand: #e6dccb; --olive: #2f3324; --olive-70: #5b5d4f;
+    --gold: #a9884a; --gold-deep: #76592a; --error: #8a1c1c;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--ivory); color: var(--olive); font: 17px/1.6 Jost, system-ui, sans-serif; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 16px; }
+  header.top { background: var(--olive); color: var(--ivory); padding: 28px 0 32px; }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .mark { width: 30px; height: 34px; background: linear-gradient(135deg,#dcc184,#b3914f 48%,#7d6230);
+          -webkit-mask: url(/images/opt/logo-mark.webp) center/contain no-repeat; mask: url(/images/opt/logo-mark.webp) center/contain no-repeat; }
+  .kicker { font-size: .72rem; letter-spacing: .22em; text-transform: uppercase; }
+  h1, h2, h3 { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 500; line-height: 1.1; }
+  h1 { font-size: clamp(2.2rem, 7vw, 3.4rem); margin: 22px 0 10px; }
+  header.top p { color: rgba(244,238,228,.82); margin: 0; max-width: 60ch; }
+  h2 { font-size: clamp(1.8rem, 5vw, 2.4rem); margin: 0; }
+  h2::before { content: ""; display: block; width: 48px; height: 1px; background: var(--gold); margin-bottom: 14px; }
+  section.sec { padding: 48px 0 8px; border-bottom: 1px solid rgba(47,51,36,.12); }
+  .sec-head { display: flex; align-items: baseline; gap: 14px; }
+  .sec-n { font-family: "Cormorant Garamond", serif; font-style: italic; font-size: 1.5rem; color: var(--olive-70); }
+  .item { margin: 28px 0; }
+  .label { display: block; font-weight: 500; margin-bottom: 4px; }
+  .help { color: var(--olive-70); font-size: .93rem; margin: 0 0 10px; }
+  input[type=text], input[type=password], textarea, select {
+    width: 100%; font: inherit; color: inherit; background: #fffdf9; border: 1px solid rgba(47,51,36,.3);
+    padding: 11px 14px; min-height: 46px; border-radius: 2px;
+  }
+  textarea { min-height: 110px; resize: vertical; }
+  input:focus-visible, textarea:focus-visible, select:focus-visible, button:focus-visible, label.opt:focus-within {
+    outline: 2px solid var(--gold); outline-offset: 2px;
+  }
+  fieldset { border: 0; padding: 0; margin: 0; }
+  legend { padding: 0; }
+  label.opt { display: flex; gap: 12px; align-items: flex-start; padding: 12px 14px; margin: 6px 0;
+              background: #fffdf9; border: 1px solid rgba(47,51,36,.18); cursor: pointer; min-height: 46px; }
+  label.opt:has(input:checked) { border-color: var(--olive); background: var(--sand); }
+  label.opt input { margin-top: 5px; accent-color: var(--olive); width: 18px; height: 18px; flex: none; }
+  .other { margin-top: 8px; }
+  button { font: inherit; cursor: pointer; min-height: 46px; padding: 10px 18px; border-radius: 2px; }
+  .btn { background: var(--olive); color: var(--ivory); border: 0; }
+  .btn-line { background: transparent; color: var(--olive); border: 1px solid var(--olive); }
+  .btn-text { background: none; border: 0; color: var(--gold-deep); text-decoration: underline; padding: 8px 4px; min-height: 44px; }
+  .rep-row { border-left: 2px solid var(--gold); padding: 6px 0 6px 16px; margin: 16px 0; }
+  .rep-row .item { margin: 14px 0; }
+  .rep-head { display: flex; justify-content: space-between; align-items: center; }
+  .files ul { list-style: none; padding: 0; margin: 10px 0 0; }
+  .files li { display: flex; justify-content: space-between; gap: 12px; align-items: center; padding: 6px 0; border-bottom: 1px solid rgba(47,51,36,.1); font-size: .95rem; }
+  .files .up { color: var(--olive-70); font-size: .9rem; }
+  .err { color: var(--error); font-size: .93rem; }
+  .status-bar { position: sticky; bottom: 0; background: rgba(244,238,228,.96); border-top: 1px solid var(--sand);
+                padding: 10px 0; backdrop-filter: blur(6px); }
+  .status-bar .wrap { display: flex; gap: 12px; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+  #status { font-size: .93rem; color: var(--olive-70); }
+  .gate { max-width: 420px; margin: 64px auto; padding: 0 16px; }
+  .done-note { background: var(--sand); padding: 14px 16px; margin-top: 24px; }
+  [hidden] { display: none !important; }
+  @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="brand"><span class="mark" aria-hidden="true"></span><span class="kicker">Luxe Aura Aesthetic Clinic</span></div>
+    <h1 id="title">Brief website</h1>
+    <p id="intro"></p>
+  </div>
+</header>
+
+<div id="gate" class="gate">
+  <form id="gate-form">
+    <label class="label" for="code">Kode akses</label>
+    <p class="help">Kode ini dikirim oleh tim web. Cukup dimasukkan sekali di perangkat ini.</p>
+    <input id="code" type="password" autocomplete="off" required>
+    <p id="gate-err" class="err" role="alert" hidden></p>
+    <button class="btn" type="submit" style="margin-top:14px;width:100%">Buka formulir</button>
+  </form>
+</div>
+
+<main id="form" class="wrap" hidden></main>
+
+<div id="bar" class="status-bar" hidden>
+  <div class="wrap">
+    <span id="status" role="status" aria-live="polite">Belum ada perubahan</span>
+    <span>
+      <button id="save" class="btn-line" type="button">Simpan sekarang</button>
+      <button id="finish" class="btn" type="button">Tandai selesai</button>
+    </span>
+  </div>
+</div>
+
+<script>
+(() => {
+  const API = "api.php";
+  const KEY = "luxe-brief-code";
+  const store = {
+    get() { try { return localStorage.getItem(KEY) || ""; } catch { return ""; } },
+    set(v) { try { localStorage.setItem(KEY, v); } catch {} },
+    clear() { try { localStorage.removeItem(KEY); } catch {} },
+  };
+  let code = "", schema = null, fields = {}, files = {}, dirty = false, saveTimer = null, saving = false;
+
+  const $ = (s, el = document) => el.querySelector(s);
+  const el = (tag, attrs = {}, ...kids) => {
+    const n = document.createElement(tag);
+    for (const [k, v] of Object.entries(attrs)) {
+      if (k === "class") n.className = v;
+      else if (k.startsWith("on")) n.addEventListener(k.slice(2), v);
+      else if (v !== false && v != null) n.setAttribute(k, v === true ? "" : v);
+    }
+    for (const kid of kids.flat()) if (kid != null) n.append(kid.nodeType ? kid : document.createTextNode(kid));
+    return n;
+  };
+  const rid = () => Math.random().toString(36).slice(2, 10).padEnd(8, "0");
+  const errText = {
+    bad_code: "Kode akses tidak cocok.",
+    too_many_attempts: "Terlalu banyak percobaan. Coba lagi 15 menit lagi.",
+    not_configured: "Formulir belum diaktifkan di server. Hubungi tim web.",
+    too_large: "File terlalu besar (maksimal 25 MB). Untuk file besar, isi link Google Drive di bagian Aset.",
+    bad_type: "Jenis file tidak didukung.",
+  };
+
+  async function call(action, data = {}, file) {
+    const body = new FormData();
+    body.append("action", action);
+    body.append("code", code);
+    for (const [k, v] of Object.entries(data)) body.append(k, v);
+    if (file) body.append("file", file);
+    let res;
+    try { res = await fetch(API, { method: "POST", body, credentials: "same-origin" }); }
+    catch { return { ok: false, error: "network" }; }
+    try { return await res.json(); } catch { return { ok: false, error: res.status === 413 ? "too_large" : "server" }; }
+  }
+
+  // ---------- gate ----------
+  async function open(c) {
+    code = c;
+    const r = await call("load");
+    if (!r.ok) {
+      store.clear();
+      $("#gate-err").textContent = errText[r.error] || "Tidak bisa terhubung. Periksa koneksi lalu coba lagi.";
+      $("#gate-err").hidden = false;
+      return;
+    }
+    store.set(c);
+    fields = Array.isArray(r.answers.fields) ? {} : (r.answers.fields || {});
+    files = Array.isArray(r.answers.files) ? {} : (r.answers.files || {});
+    $("#gate").hidden = true;
+    render();
+    $("#form").hidden = false;
+    $("#bar").hidden = false;
+    setStatus(r.answers.updatedAt ? "Terakhir disimpan " + when(r.answers.updatedAt) : "Belum ada jawaban tersimpan");
+  }
+  $("#gate-form").addEventListener("submit", (e) => { e.preventDefault(); $("#gate-err").hidden = true; open($("#code").value.trim()); });
+
+  // ---------- saving ----------
+  const when = (iso) => new Date(iso).toLocaleString("id-ID", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" });
+  const setStatus = (t) => { $("#status").textContent = t; };
+  function changed() {
+    dirty = true;
+    setStatus("Ada perubahan, menyimpan...");
+    clearTimeout(saveTimer);
+    saveTimer = setTimeout(save, 1200);
+    applyShowIf();
+  }
+  async function save() {
+    if (saving) { clearTimeout(saveTimer); saveTimer = setTimeout(save, 600); return; }
+    saving = true; dirty = false;
+    const r = await call("save", { fields: JSON.stringify(fields) });
+    saving = false;
+    if (r.ok) setStatus("Tersimpan " + when(r.updatedAt));
+    else { dirty = true; setStatus("Gagal menyimpan. " + (errText[r.error] || "Coba tekan Simpan sekarang.")); }
+  }
+  $("#save").addEventListener("click", () => { clearTimeout(saveTimer); save(); });
+  $("#finish").addEventListener("click", async () => {
+    fields._status = "submitted";
+    clearTimeout(saveTimer);
+    await save();
+    $("#finish").textContent = "Sudah ditandai selesai";
+    setStatus("Terima kasih. Jawaban sudah kami terima, dan masih bisa diubah kapan saja.");
+  });
+  window.addEventListener("beforeunload", (e) => { if (dirty) { e.preventDefault(); e.returnValue = ""; } });
+
+  // ---------- rendering ----------
+  function render() {
+    $("#title").textContent = schema.title;
+    const root = $("#form");
+    root.innerHTML = "";
+    schema.sections.forEach((s) => {
+      const sec = el("section", { class: "sec", "aria-labelledby": "s-" + s.id },
+        el("div", { class: "sec-head" }, el("span", { class: "sec-n" }, s.id), el("h2", { id: "s-" + s.id }, s.title)));
+      s.items.forEach((it) => sec.append(item(it, fields, it.key)));
+      root.append(sec);
+    });
+    if (fields._status === "submitted") $("#finish").textContent = "Sudah ditandai selesai";
+    root.append(el("p", { class: "help", style: "margin:40px 0 24px" },
+      "Kalau beberapa orang mengisi di saat yang sama, simpanan terakhir yang dipakai. Sebaiknya bagi bagian per orang."));
+    applyShowIf();
+  }
+
+  function item(it, bag, key, fileKey = key) {
+    const id = "f-" + fileKey.replace(/[^a-z0-9]/gi, "-");
+    const wrap = el("div", { class: "item", "data-key": key, "data-showif": it.showIf ? JSON.stringify(it.showIf) : null });
+    const help = it.help ? el("p", { class: "help", id: id + "-h" }, it.help) : null;
+    const desc = it.help ? id + "-h" : null;
+
+    if (it.type === "text" || it.type === "textarea") {
+      const input = el(it.type === "text" ? "input" : "textarea",
+        { id, type: it.type === "text" ? "text" : null, "aria-describedby": desc,
+          oninput: (e) => { bag[key] = e.target.value; changed(); } });
+      input.value = bag[key] || "";
+      wrap.append(el("label", { class: "label", for: id }, it.label), help, input);
+    } else if (it.type === "select") {
+      const sel = el("select", { id, onchange: (e) => { bag[key] = e.target.value; changed(); } },
+        el("option", { value: "" }, "Pilih"), ...it.options.map((o) => el("option", { value: o }, o)));
+      sel.value = bag[key] || "";
+      wrap.append(el("label", { class: "label", for: id }, it.label), help, sel);
+    } else if (it.type === "check") {
+      const cb = el("input", { type: "checkbox", id, onchange: (e) => { bag[key] = e.target.checked; changed(); } });
+      cb.checked = !!bag[key];
+      wrap.append(el("label", { class: "opt", for: id }, cb, el("span", {}, it.label)));
+    } else if (it.type === "choice" || it.type === "checklist") {
+      const multi = it.type === "checklist";
+      const v = bag[key] || (multi ? { picked: [], other: "" } : { choice: null, other: "" });
+      bag[key] = v;
+      const fs = el("fieldset", { "aria-describedby": desc }, el("legend", { class: "label" }, it.label), help);
+      const opts = [...it.options];
+      opts.forEach((o, i) => {
+        const oid = id + "-" + i;
+        const inp = el("input", { type: multi ? "checkbox" : "radio", name: id, id: oid, value: o,
+          onchange: (e) => {
+            if (multi) {
+              v.picked = v.picked.filter((x) => x !== o);
+              if (e.target.checked) v.picked.push(o);
+            } else v.choice = o;
+            changed();
+          } });
+        inp.checked = multi ? v.picked.includes(o) : v.choice === o;
+        fs.append(el("label", { class: "opt", for: oid }, inp, el("span", {}, o)));
+      });
+      if (it.other) {
+        const oid = id + "-other";
+        const ta = el("textarea", { id: oid, class: "other", rows: 2, placeholder: "Tulis di sini kalau berbeda atau ada tambahan",
+          oninput: (e) => { v.other = e.target.value; changed(); } });
+        ta.value = v.other || "";
+        fs.append(el("label", { class: "help", for: oid, style: "display:block;margin:12px 0 0" }, it.otherLabel || "Lainnya atau catatan"), ta);
+      }
+      wrap.append(fs);
+    } else if (it.type === "files") {
+      wrap.append(el("label", { class: "label", for: id }, it.label), help, fileBox(it, fileKey, id));
+    } else if (it.type === "repeater") {
+      const rows = Array.isArray(bag[key]) ? bag[key] : (bag[key] = []);
+      const list = el("div");
+      const draw = () => {
+        list.innerHTML = "";
+        rows.forEach((row, i) => {
+          const r = el("div", { class: "rep-row" },
+            el("div", { class: "rep-head" },
+              el("h3", { style: "margin:0;font-size:1.4rem" }, it.label + " " + (i + 1)),
+              el("button", { type: "button", class: "btn-text", onclick: () => {
+                if (!confirm("Hapus baris ini?")) return;
+                rows.splice(i, 1); draw(); changed();
+              } }, "Hapus")));
+          it.fields.forEach((sub) => r.append(item(sub, row, sub.key, key + ":" + row._id + ":" + sub.key)));
+          list.append(r);
+        });
+      };
+      draw();
+      wrap.append(el("p", { class: "label" }, it.label), help, list,
+        el("button", { type: "button", class: "btn-line", onclick: () => { rows.push({ _id: rid() }); draw(); changed(); } },
+          "+ " + (it.addLabel || "Tambah")));
+    }
+    return wrap;
+  }
+
+  function fileBox(it, fkey, id) {
+    const box = el("div", { class: "files" });
+    const list = el("ul");
+    const msg = el("p", { class: "err", role: "alert", hidden: true });
+    const draw = () => {
+      list.innerHTML = "";
+      (files[fkey] || []).forEach((f) => list.append(el("li", {},
+        el("span", {}, f.name + " ", el("span", { class: "up" }, Math.max(1, Math.round(f.size / 1024)) + " KB")),
+        el("button", { type: "button", class: "btn-text", onclick: async () => {
+          if (!confirm("Hapus " + f.name + "?")) return;
+          const r = await call("delete_file", { field: fkey, stored: f.stored });
+          if (r.ok) { files[fkey] = r.files; draw(); }
+        } }, "Hapus"))));
+    };
+    const input = el("input", { type: "file", id, multiple: true, accept: it.accept || null,
+      onchange: async (e) => {
+        msg.hidden = true;
+        for (const file of [...e.target.files]) {
+          if (file.size > 25 * 1024 * 1024) { msg.textContent = file.name + ": " + errText.too_large; msg.hidden = false; continue; }
+          const li = el("li", { class: "up" }, "Mengunggah " + file.name + "...");
+          list.append(li);
+          const r = await call("upload", { field: fkey }, file);
+          if (r.ok) { files[fkey] = r.files; setStatus("File tersimpan " + when(new Date().toISOString())); }
+          else { msg.textContent = file.name + ": " + (errText[r.error] || "Gagal mengunggah."); msg.hidden = false; }
+          draw();
+        }
+        e.target.value = "";
+      } });
+    draw();
+    box.append(input, list, msg);
+    return box;
+  }
+
+  function applyShowIf() {
+    document.querySelectorAll("[data-showif]").forEach((n) => {
+      const c = JSON.parse(n.dataset.showif);
+      const v = fields[c.key];
+      n.hidden = !(v && (v.choice === c.equals || (v.picked || []).includes(c.equals)));
+    });
+  }
+
+  // ---------- boot ----------
+  fetch("questions.json", { cache: "no-store" }).then((r) => r.json()).then((s) => {
+    schema = s;
+    $("#title").textContent = s.title;
+    $("#intro").textContent = s.intro;
+    const saved = store.get();
+    if (saved) open(saved);
+  });
+})();
+</script>
+</body>
+</html>

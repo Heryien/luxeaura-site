@@ -1,0 +1,8 @@
+# lib.php holds shared code only and must not be called directly.
+<Files "lib.php">
+  Require all denied
+</Files>
+# The brief is private: never index it.
+<IfModule mod_headers.c>
+  Header always set X-Robots-Tag "noindex, nofollow"
+</IfModule>

@@ -1,0 +1,302 @@
+{
+  "title": "Brief website Luxe Aura",
+  "intro": "Terima kasih sudah meluangkan waktu. Formulir ini mengumpulkan semua yang kami perlukan untuk membangun website, admin panel, dan area member. Jawaban tersimpan otomatis, jadi boleh diisi bertahap dan oleh beberapa orang. Kalau usulan kami sudah cocok, cukup pilih opsi yang bertanda (usulan).",
+  "sections": [
+    {
+      "id": "A",
+      "title": "Menu & halaman",
+      "items": [
+        {
+          "key": "language",
+          "type": "choice",
+          "label": "Bahasa website",
+          "help": "Website saat ini berbahasa Inggris.",
+          "options": ["Inggris saja (usulan)", "Dua bahasa: Indonesia dan Inggris", "Indonesia saja"],
+          "other": true
+        },
+        {
+          "key": "about_content",
+          "type": "choice",
+          "label": "Isi halaman About Us",
+          "options": ["Cerita singkat klinik, profil dokter, dan alat unggulan (usulan)"],
+          "other": true,
+          "otherLabel": "Isi lain atau tambahan"
+        },
+        {
+          "key": "about_story",
+          "type": "textarea",
+          "label": "Cerita klinik",
+          "help": "Kapan berdiri, visi, hal yang membuat Luxe Aura berbeda. Poin-poin singkat sudah cukup, nanti kami rapikan."
+        },
+        {
+          "key": "doctors",
+          "type": "repeater",
+          "label": "Profil dokter",
+          "help": "Satu baris per dokter. Hanya dokter yang setuju profilnya ditampilkan.",
+          "addLabel": "Tambah dokter",
+          "fields": [
+            { "key": "name", "type": "text", "label": "Nama lengkap dan gelar (sesuai SIP)" },
+            { "key": "sip", "type": "text", "label": "Nomor SIP" },
+            { "key": "education", "type": "textarea", "label": "Pendidikan dan sertifikasi" },
+            { "key": "focus", "type": "text", "label": "Treatment yang ditangani" },
+            { "key": "photo", "type": "files", "label": "Foto profil", "accept": "image/*" },
+            { "key": "consent", "type": "check", "label": "Dokter setuju profil dan fotonya ditampilkan di website" }
+          ]
+        },
+        {
+          "key": "event_archive",
+          "type": "choice",
+          "label": "Promo dan event yang sudah lewat",
+          "options": ["Promo kedaluwarsa hilang otomatis, event lama tetap tampil sebagai galeri (usulan)", "Semua yang sudah lewat disembunyikan"],
+          "other": true
+        },
+        {
+          "key": "contact_form",
+          "type": "choice",
+          "label": "Halaman Contact Us",
+          "options": ["Alamat, peta, jam buka, dan tombol WhatsApp saja (usulan)", "Perlu formulir kontak juga"],
+          "other": true
+        },
+        {
+          "key": "contact_form_target",
+          "type": "text",
+          "label": "Kalau perlu formulir: pesan dikirim ke email atau nomor WhatsApp siapa?",
+          "showIf": { "key": "contact_form", "equals": "Perlu formulir kontak juga" }
+        },
+        {
+          "key": "hours",
+          "type": "textarea",
+          "label": "Jam operasional",
+          "help": "Contoh: Senin sampai Sabtu 10.00 sampai 20.00, Minggu 10.00 sampai 17.00, libur nasional tutup."
+        },
+        {
+          "key": "member_menu_guest",
+          "type": "choice",
+          "label": "Menu Member untuk pengunjung yang belum login",
+          "options": ["Info singkat cara menjadi member Luxe Glow Club, lalu tombol login (usulan)", "Langsung halaman login saja"],
+          "other": true
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "title": "Admin panel",
+      "items": [
+        {
+          "key": "admins",
+          "type": "textarea",
+          "label": "Siapa saja admin, dan apa yang boleh mereka ubah?",
+          "help": "Contoh: Rina (semua), Dika (promo dan banner saja), Sari (data member saja)."
+        },
+        {
+          "key": "page_builder",
+          "type": "choice",
+          "label": "Tambah atau edit halaman oleh admin",
+          "options": [
+            "Tambah halaman dari template yang disiapkan (judul, teks, foto, banner) dan atur urutan menu (usulan)",
+            "Desain layout halaman bebas seperti Canva"
+          ],
+          "help": "Opsi kedua jauh lebih mahal dan berisiko merusak tampilan website.",
+          "other": true
+        },
+        {
+          "key": "banners",
+          "type": "choice",
+          "label": "Banner tampil di mana?",
+          "options": ["Slider di homepage dan banner per halaman, dengan jadwal tayang mulai dan selesai (usulan)", "Slider di homepage saja"],
+          "other": true
+        },
+        {
+          "key": "video",
+          "type": "choice",
+          "label": "Video treatment",
+          "options": ["Tempel link Instagram, TikTok, atau YouTube (usulan)", "Upload file video langsung ke website"],
+          "help": "Upload video langsung membuat biaya hosting naik cukup besar.",
+          "other": true
+        },
+        {
+          "key": "faq_owner",
+          "type": "choice",
+          "label": "Siapa yang menyiapkan FAQ dan penjelasan medis tiap treatment?",
+          "help": "Penjelasan treatment di website saat ini masih bersifat umum dan perlu dicek dokter klinik sebelum website dibuka untuk publik.",
+          "options": ["Kami (tim web) buat draft, lalu dokter klinik memeriksa dan mengoreksi (usulan)", "Tim klinik menyiapkan sendiri"],
+          "other": true
+        },
+        {
+          "key": "faq_files",
+          "type": "files",
+          "label": "Materi FAQ atau penjelasan treatment yang sudah ada (opsional)",
+          "help": "Brosur, dokumen, atau screenshot. PDF, Word, atau gambar.",
+          "accept": ".pdf,.doc,.docx,image/*"
+        }
+      ]
+    },
+    {
+      "id": "C",
+      "title": "Area member",
+      "items": [
+        {
+          "key": "login_method",
+          "type": "choice",
+          "label": "Member login dengan",
+          "options": ["Email (usulan)", "Nomor WhatsApp"],
+          "other": true
+        },
+        {
+          "key": "password_reset",
+          "type": "choice",
+          "label": "Kalau member lupa password",
+          "options": ["Direset otomatis lewat email (usulan)", "Minta ke admin, admin yang mereset"],
+          "other": true
+        },
+        {
+          "key": "member_fields",
+          "type": "checklist",
+          "label": "Data member yang disimpan",
+          "options": ["Nama", "Nomor HP", "Email", "Nomor member", "Tanggal bergabung", "Tanggal berakhir keanggotaan", "Tanggal lahir", "Level member"],
+          "other": true
+        },
+        {
+          "key": "member_validity",
+          "type": "text",
+          "label": "Masa berlaku keanggotaan",
+          "help": "Contoh: 1 tahun sejak bergabung, atau tidak ada batas."
+        },
+        {
+          "key": "tiers",
+          "type": "choice",
+          "label": "Jenis member",
+          "options": ["Satu jenis saja: Luxe Glow Club", "Beberapa level dengan benefit berbeda"],
+          "other": true
+        },
+        {
+          "key": "tier_benefits",
+          "type": "textarea",
+          "label": "Benefit member (per level kalau ada beberapa)",
+          "help": "Benefit dari klinik sendiri, misalnya diskon treatment, prioritas booking, treatment gratis tahunan, undangan event."
+        },
+        {
+          "key": "partner_claim",
+          "type": "choice",
+          "label": "Cara member memakai promo partner (resto, spa, gym)",
+          "options": [
+            "Menunjukkan halaman member di HP ke kasir partner (usulan, paling sederhana)",
+            "Satu kode voucher yang sama untuk semua member",
+            "Kode unik per member, supaya pemakaiannya bisa dilacak"
+          ],
+          "other": true
+        },
+        {
+          "key": "member_count_now",
+          "type": "text",
+          "label": "Jumlah member saat ini (perkiraan)"
+        },
+        {
+          "key": "member_count_year",
+          "type": "text",
+          "label": "Perkiraan jumlah member setahun ke depan"
+        },
+        {
+          "key": "partners",
+          "type": "repeater",
+          "label": "Partner dan benefitnya",
+          "help": "Satu baris per partner. Isi yang sudah ada saja, sisanya bisa ditambah nanti lewat admin panel.",
+          "addLabel": "Tambah partner",
+          "fields": [
+            { "key": "name", "type": "text", "label": "Nama partner" },
+            { "key": "category", "type": "select", "label": "Kategori", "options": ["Resto atau kafe", "Spa", "Gym atau olahraga", "Fashion atau perhiasan", "Hotel", "Lainnya"] },
+            { "key": "benefit", "type": "textarea", "label": "Benefit untuk member" },
+            { "key": "terms", "type": "textarea", "label": "Syarat dan ketentuan" },
+            { "key": "period", "type": "text", "label": "Periode berlaku" },
+            { "key": "banner", "type": "files", "label": "Logo atau banner partner", "accept": "image/*,.pdf" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "D",
+      "title": "Booking & treatment",
+      "items": [
+        {
+          "key": "booking_target",
+          "type": "choice",
+          "label": "Tombol booking diarahkan ke",
+          "options": [
+            "WhatsApp Admin 1 (0822-6188-7788) (usulan)",
+            "Bergiliran ke 3 nomor admin",
+            "Link sistem booking lain"
+          ],
+          "other": true
+        },
+        {
+          "key": "booking_link",
+          "type": "text",
+          "label": "Link sistem booking",
+          "showIf": { "key": "booking_target", "equals": "Link sistem booking lain" }
+        },
+        {
+          "key": "new_treatments",
+          "type": "checklist",
+          "label": "Treatment yang perlu ditambahkan ke website",
+          "help": "Kami menemukan treatment ini di Instagram dan liputan media, tapi belum ada di website. Centang yang perlu ditambahkan.",
+          "options": ["Jalupro Super Hydro", "Sylfirm X", "Pico Laser Rejuve", "Facial Platinum", "ONDA PRO for Face", "Cryolipolysis"],
+          "other": true,
+          "otherLabel": "Treatment lain yang belum ada"
+        },
+        {
+          "key": "treatment_files",
+          "type": "files",
+          "label": "Brosur, foto, atau materi treatment (opsional)",
+          "accept": "image/*,.pdf"
+        }
+      ]
+    },
+    {
+      "id": "E",
+      "title": "Aset & akses",
+      "items": [
+        {
+          "key": "logo_files",
+          "type": "files",
+          "label": "File logo asli (vektor)",
+          "help": "Format AI, SVG, EPS, atau PDF. Logo di website saat ini kami rekonstruksi dari foto profil Instagram, jadi belum 100% sama dengan aslinya.",
+          "accept": ".ai,.svg,.eps,.pdf,.png"
+        },
+        {
+          "key": "domain_access",
+          "type": "textarea",
+          "label": "Domain luxeauraclinic.id",
+          "help": "Siapa yang memegang akses domain dan hosting? Nama dan kontak yang bisa kami hubungi saat website siap dibuka untuk publik."
+        },
+        {
+          "key": "photo_files",
+          "type": "files",
+          "label": "Foto klinik dan alat (resolusi tinggi)",
+          "help": "Maksimal 25 MB per file.",
+          "accept": "image/*"
+        },
+        {
+          "key": "photo_link",
+          "type": "text",
+          "label": "Atau link Google Drive / Dropbox untuk file besar"
+        }
+      ]
+    },
+    {
+      "id": "F",
+      "title": "Penutup",
+      "items": [
+        {
+          "key": "notes",
+          "type": "textarea",
+          "label": "Catatan atau permintaan lain"
+        },
+        {
+          "key": "filled_by",
+          "type": "text",
+          "label": "Diisi oleh (nama dan jabatan)"
+        }
+      ]
+    }
+  ]
+}
